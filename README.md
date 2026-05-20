@@ -1,6 +1,6 @@
 # nioikusai
 
-`hakobu-family.com/loofen` 用のLoofen PPCアフィリエイトLPです。
+`loofen.hakobu-family.com/loofen` 用のLoofen PPCアフィリエイトLPです。
 
 ## Commands
 
