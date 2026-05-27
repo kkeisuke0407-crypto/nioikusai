@@ -8,6 +8,7 @@ const SITE_URL = import.meta.env.PUBLIC_LOOFEN_SITE_URL ?? "https://loofen.hakob
 const BASE_PATH = "/loofen";
 const CANONICAL = `${SITE_URL}${BASE_PATH}`;
 const OGP_IMAGE = `${SITE_URL}${BASE_PATH}/product-white-official.webp`;
+const ASSET_VERSION = "20260527-2";
 const AFFILIATE_URL = "https://loofen.jp/";
 const UPDATED_AT = "2026年5月27日";
 
@@ -155,7 +156,7 @@ const faqJsonLd = {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/loofen/styles.css" />
+  <link rel="stylesheet" href={`/loofen/styles.css?v=${ASSET_VERSION}`} />
   <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-18129603657"></script>
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
