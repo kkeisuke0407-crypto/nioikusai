@@ -1756,3 +1756,135 @@ th {
     padding: 12px 9px;
   }
 }
+
+/* Loofen v4: customer-facing copy and review presentation */
+.hero-copy::before,
+.audit-card,
+.floating-note,
+.image-note,
+.mobile-image-note {
+  display: none;
+}
+
+.hero-art {
+  padding: 0;
+  align-self: center;
+  overflow: hidden;
+  background: #ece8df;
+}
+
+.hero-art .lifestyle-hero {
+  height: 580px;
+  min-height: 0;
+  margin: 0;
+  border: 0;
+  object-position: center bottom;
+}
+
+.notice {
+  padding: 9px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #fffdf8;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.reviews {
+  background: #fffdf8;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.review-card {
+  padding: 24px;
+  border: 2px solid var(--ink);
+  background: #fff;
+}
+
+.review-stars {
+  margin: 0 0 14px;
+  color: #eb8a16;
+  font-weight: 900;
+}
+
+.review-stars span {
+  margin-left: 10px;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.review-card h3 {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+}
+
+.review-card blockquote {
+  margin: 0 0 16px;
+  padding: 0;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.review-color,
+.review-note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.review-note {
+  margin-top: 18px;
+}
+
+.offer-visual img {
+  display: block;
+  width: min(76%, 320px);
+  height: auto;
+  aspect-ratio: 960 / 1146;
+  object-fit: contain;
+}
+
+@media (min-width: 901px) {
+  .hero-inner {
+    align-items: center;
+  }
+
+  .hero-art {
+    padding: 0;
+  }
+
+  .hero-art .lifestyle-hero {
+    height: 580px;
+    min-height: 0;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 901px) and (max-height: 800px) {
+  .hero-art .lifestyle-hero {
+    height: 500px;
+    min-height: 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card {
+    padding: 18px 14px;
+  }
+
+  .review-card blockquote {
+    font-size: 0.96rem;
+    line-height: 1.75;
+  }
+}
