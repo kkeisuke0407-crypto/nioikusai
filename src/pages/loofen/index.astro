@@ -7,9 +7,9 @@ const PAGE_DESC =
 const SITE_URL = import.meta.env.PUBLIC_LOOFEN_SITE_URL ?? "https://loofen.hakobu-family.com";
 const BASE_PATH = "/loofen";
 const CANONICAL = `${SITE_URL}${BASE_PATH}`;
-const OGP_IMAGE = `${SITE_URL}${BASE_PATH}/hero-kitchen-dryer-ai.png`;
+const OGP_IMAGE = `${SITE_URL}${BASE_PATH}/product-white-official.webp`;
 const AFFILIATE_URL = "https://loofen.jp/";
-const UPDATED_AT = "2026年5月20日";
+const UPDATED_AT = "2026年5月27日";
 
 const comparisonRows = [
   {
@@ -67,6 +67,24 @@ const buyingChecks = [
     label: "消耗品",
     value: "フィルター等を確認",
     detail: "活性炭フィルターやバスケットカバーなど、購入後に必要なものと交換頻度を確認します。"
+  }
+];
+
+const reviewInsights = [
+  {
+    stat: "35 / 92",
+    title: "臭い・においへの言及",
+    detail: "提供されたレビュー自由記述では、臭い・においに触れた回答が35件ありました。"
+  },
+  {
+    stat: "45 / 92",
+    title: "楽さ・簡単さへの言及",
+    detail: "楽さ・手間・操作の簡単さに触れた回答は45件。毎日続けられるかは確認したい軸です。"
+  },
+  {
+    stat: "店頭ログ",
+    title: "購入前は費用も確認",
+    detail: "提供された接客ログでは、置き場所に加えて専用袋やフィルターなど継続費を気にする会話が確認できました。"
   }
 ];
 
@@ -172,14 +190,14 @@ const faqJsonLd = {
             <span>乾燥式を候補にする前の確認</span>
           </div>
           <img
-            class="mobile-hero-photo"
-            src="/loofen/hero-kitchen-dryer-ai.png"
-            width="1536"
-            height="1024"
-            alt=""
+            class="mobile-hero-photo product-photo"
+            src="/loofen/product-white-official.webp"
+            width="890"
+            height="892"
+            alt="Loofen生ゴミ乾燥機のホワイト本体"
             decoding="async"
           />
-          <p class="mobile-image-note">画像はイメージです。</p>
+          <p class="mobile-image-note">商品画像：公式サイト掲載素材</p>
           <h1>生ゴミ処理機、<br />本当にいらない？</h1>
           <p class="hero-lead">
             「便利そうだけど高い」「結局使わないかも」。そう迷っている人向けに、
@@ -209,14 +227,15 @@ const faqJsonLd = {
             <p>3つの負担が重なったら、乾燥式を検討する価値があります。</p>
           </div>
           <img
-            src="/loofen/hero-kitchen-dryer-ai.png"
-            width="1536"
-            height="1024"
-            alt="キッチンカウンターに置かれた白い生ゴミ乾燥機と野菜くず"
+            class="product-photo"
+            src="/loofen/product-white-official.webp"
+            width="890"
+            height="892"
+            alt="Loofen生ゴミ乾燥機のホワイト本体"
             decoding="async"
             fetchpriority="high"
           />
-          <p class="image-note">画像はイメージです。</p>
+          <p class="image-note">商品画像：公式サイト掲載素材</p>
           <div class="floating-note">
             <strong>臭い・重さ・虫</strong>
             <span>夏のキッチンでつらくなる前に、必要性をチェック</span>
@@ -281,6 +300,30 @@ const faqJsonLd = {
             </ul>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="evidence">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">PROVIDED DATA</span>
+          <h2>レビューと店頭ログから、確認ポイントを絞る</h2>
+          <p class="lead">
+            提供されたレビュー自由記述92件と店頭接客ログを確認。良い面だけでなく、購入前に確かめたい不安も残します。
+          </p>
+        </div>
+        <div class="insight-grid">
+          {reviewInsights.map((item) => (
+            <article class="insight">
+              <strong>{item.stat}</strong>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+        <p class="research-note">
+          出典：提供資料「loofenレビュー.xlsx」「蔦屋家電_接客ログ.xlsx」を当サイトで集計・要約。個人の感想を含み、効果や満足度を保証するものではありません。
+        </p>
       </div>
     </section>
 
@@ -356,12 +399,20 @@ const faqJsonLd = {
           <span class="section-label">DRYER CANDIDATE</span>
           <h2>乾燥式で候補に入るLoofen</h2>
           <p class="lead">
-            Loofenは乾燥式の生ゴミ乾燥機。公式サイトでは、77%削減、5L容量、活性炭フィルター、1日約20円、60日間返金保証などが訴求されています。
+            Loofenは乾燥式の生ゴミ乾燥機。公式サイトでは、生ゴミ77%削減、5L容量、活性炭フィルター、60日間返金保証などが案内されています。
           </p>
         </div>
         <article class="offer-card">
-          <div class="offer-visual" aria-hidden="true">
-            <div class="mini-device"></div>
+          <div class="offer-visual">
+            <img
+              src="/loofen/product-white-official.webp"
+              width="890"
+              height="892"
+              alt="Loofen生ゴミ乾燥機のホワイト本体"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>商品画像：公式サイト掲載素材</p>
           </div>
           <div class="offer-body">
             <h3>Loofen SLW01を確認する前に見るポイント</h3>
@@ -387,7 +438,7 @@ const faqJsonLd = {
               </div>
             </div>
             <p class="note">
-              公式サイトでは、10,000円オフクーポン、WEB限定特典、60日間返金保証、1年間保証などの表示があります。適用条件と最新内容は遷移先で確認してください。
+              2026年5月27日時点の公式サイトでは、10,000円オフクーポン、WEB限定特典、60日間返金保証、1年間保証などの表示があります。適用条件と最新内容は遷移先で確認してください。
             </p>
             <div class="source-note">
               <strong>公式情報で確認したい条件</strong>
